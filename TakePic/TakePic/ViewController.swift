@@ -10,6 +10,12 @@ import UIKit
 class ViewController: UIViewController {
     
     //MARK: Properties
+    private var image: UIImageView = {
+        let image = UIImageView()
+        image.frame = .init(x: 0, y: 0, width: 500, height: 500)
+        return image
+    }()
+    
     private var takePicButton: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = UIColor.systemGray
@@ -23,13 +29,10 @@ class ViewController: UIViewController {
         return button
     }()
     
-    private var camera = UIImagePickerController()
-    
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
-        camera.delegate = self
     }
     
     
@@ -38,11 +41,19 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         //Adding view
+        view.addSubview(image)
         view.addSubview(takePicButton)
         
+        image.translatesAutoresizingMaskIntoConstraints = false
         takePicButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
+            
+            // Image
+            image.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            image.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            image.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            image.bottomAnchor.constraint(equalTo: takePicButton.topAnchor, constant: -100),
             
             // Take Pic Button
             takePicButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -57,20 +68,28 @@ class ViewController: UIViewController {
     
     @objc private func cameraDidTapped() {
         
-        guard let mediaTypes = UIImagePickerController.availableMediaTypes(for: .camera) else { return }
-        
         let vc = UIImagePickerController()
         vc.sourceType = .camera
-        vc.mediaTypes = mediaTypes
+        vc.delegate = self
         present(vc, animated: true)
+        
     }
     
 }
 
 extension ViewController:  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        
+        self.image.image = image
+        picker.dismiss(animated: true)
     }
+    
+    
     
 }

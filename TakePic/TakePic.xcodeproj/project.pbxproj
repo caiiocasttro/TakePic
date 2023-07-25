@@ -10,8 +10,6 @@
 		E53AEC252A6EB45500BCEC38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53AEC242A6EB45500BCEC38 /* AppDelegate.swift */; };
 		E53AEC272A6EB45500BCEC38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53AEC262A6EB45500BCEC38 /* SceneDelegate.swift */; };
 		E53AEC292A6EB45500BCEC38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53AEC282A6EB45500BCEC38 /* ViewController.swift */; };
-		E53AEC2C2A6EB45500BCEC38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53AEC2A2A6EB45500BCEC38 /* Main.storyboard */; };
-		E53AEC2F2A6EB45500BCEC38 /* TakePic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E53AEC2D2A6EB45500BCEC38 /* TakePic.xcdatamodeld */; };
 		E53AEC312A6EB45B00BCEC38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53AEC302A6EB45B00BCEC38 /* Assets.xcassets */; };
 		E53AEC342A6EB45B00BCEC38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53AEC322A6EB45B00BCEC38 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -21,8 +19,6 @@
 		E53AEC242A6EB45500BCEC38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E53AEC262A6EB45500BCEC38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E53AEC282A6EB45500BCEC38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E53AEC2B2A6EB45500BCEC38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E53AEC2E2A6EB45500BCEC38 /* TakePic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TakePic.xcdatamodel; sourceTree = "<group>"; };
 		E53AEC302A6EB45B00BCEC38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E53AEC332A6EB45B00BCEC38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E53AEC352A6EB45B00BCEC38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,11 +57,9 @@
 				E53AEC242A6EB45500BCEC38 /* AppDelegate.swift */,
 				E53AEC262A6EB45500BCEC38 /* SceneDelegate.swift */,
 				E53AEC282A6EB45500BCEC38 /* ViewController.swift */,
-				E53AEC2A2A6EB45500BCEC38 /* Main.storyboard */,
 				E53AEC302A6EB45B00BCEC38 /* Assets.xcassets */,
 				E53AEC322A6EB45B00BCEC38 /* LaunchScreen.storyboard */,
 				E53AEC352A6EB45B00BCEC38 /* Info.plist */,
-				E53AEC2D2A6EB45500BCEC38 /* TakePic.xcdatamodeld */,
 			);
 			path = TakePic;
 			sourceTree = "<group>";
@@ -130,7 +124,6 @@
 			files = (
 				E53AEC342A6EB45B00BCEC38 /* LaunchScreen.storyboard in Resources */,
 				E53AEC312A6EB45B00BCEC38 /* Assets.xcassets in Resources */,
-				E53AEC2C2A6EB45500BCEC38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +135,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53AEC292A6EB45500BCEC38 /* ViewController.swift in Sources */,
-				E53AEC2F2A6EB45500BCEC38 /* TakePic.xcdatamodeld in Sources */,
 				E53AEC252A6EB45500BCEC38 /* AppDelegate.swift in Sources */,
 				E53AEC272A6EB45500BCEC38 /* SceneDelegate.swift in Sources */,
 			);
@@ -151,14 +143,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E53AEC2A2A6EB45500BCEC38 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E53AEC2B2A6EB45500BCEC38 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E53AEC322A6EB45B00BCEC38 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,19 +344,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E53AEC2D2A6EB45500BCEC38 /* TakePic.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E53AEC2E2A6EB45500BCEC38 /* TakePic.xcdatamodel */,
-			);
-			currentVersion = E53AEC2E2A6EB45500BCEC38 /* TakePic.xcdatamodel */;
-			path = TakePic.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E53AEC192A6EB45500BCEC38 /* Project object */;
 }
