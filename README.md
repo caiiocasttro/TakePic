@@ -17,5 +17,6 @@ The app takes a picture and displays it on the first screen as an UIImage!
 
 ### 📸 Screenshots of the application
 
- ![TakePic screenshot](https://github.com/caiiocasttro/TakePic/assets/104564732/52548506-e688-45c1-989e-495afdc6e9ca)
+![TakePic screenshot](https://github.com/caiiocasttro/TakePic/assets/104564732/4b39d764-b50e-4140-9b20-b5ab1a0141bb)
+ 
 
